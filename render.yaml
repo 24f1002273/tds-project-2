@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: llm-analysis-quiz
+    env: python
+    plan: starter
+    region: singapore
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install --with-deps chromium
+    startCommand: |
+      uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: SECRET_KEY
+        sync: false
+      - key: AIPIPE_TOKEN
+        sync: false
