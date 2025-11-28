@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+httpx
+beautifulsoup4
+playwright
+pdfplumber
+pillow
+urllib3
+lxml
